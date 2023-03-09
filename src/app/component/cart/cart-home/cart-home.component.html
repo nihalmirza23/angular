@@ -1,0 +1,39 @@
+
+<div *ngIf="!isCartEmpty">
+  <div *ngFor="let c of cart.productsAdded"  >
+<div class="card">
+
+  <div class="card-header">
+    Your Products
+  </div>
+  <div class="card-body">
+
+    <h5 class="card-title">Product Name:{{c.productName}}</h5>
+    <p class="card-subtitle">Product Quantity :{{c.quantity}}</p>
+    <p class="card-text">Price :{{c.productPrice|currency:'Rs':'symbol'}}</p>
+    <div *ngFor="let i of c.productImage|slice:0:1">
+      <img src={{i}} style="height: 150px; width: 150px;" alt="img load error" alt="produce image not found" />
+  </div>
+    <h6 class="card-subtitle mb-2 text-muted">
+    </h6>
+    <a (click)="addQuantity(c.productId)" class="btn btn-success">add quantity</a>
+    <a (click)="subtractQuantity(c.productId)" class="btn btn-danger">reduce quantity</a>
+    <a (click)="deleteItem(c.productId)" class="btn btn-info">delete item</a>
+  </div>
+</div>
+</div><br>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Total Cart Price :{{cart.totalPrice |currency:'Rs':'symbol'}}</button>
+&nbsp;&nbsp;&nbsp;
+
+<button type="button" class="btn btn-primary  btn-lg btn-block" (click)="checkOut()" >place order</button><br><br>
+</div>
+
+<div  class="row" *ngIf="isCartEmpty">
+  <div class="col-lg-3"></div>
+  <br>
+  <br>
+  <img src="../../../../assets/images/cart.jpeg" alt="csd" style="height: 400px; width: 600px;">
+</div>
+
+
+

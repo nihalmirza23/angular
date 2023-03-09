@@ -1,0 +1,58 @@
+<p>order-home works!</p>
+<div>
+  <h2>Amount to Pay:{{amount}}</h2>
+</div>
+
+<div class="row">
+  <div class="col-lg-2"></div>
+
+  <div class="col-lg-8">
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+      <div class="card-body">Payment Options:-</div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-8">
+
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="form-check">
+                <input class="form-check-input" name="paymentMethod" type="radio" id="E-wallet" formControlName="paymentMethod" value="E-wallet">
+                <label class="form-check-label" for="E-wallet">
+                  E-wallet
+                </label>
+              </div>
+            </li>
+            <li class="list-group-item" >
+              <div class="form-check" >
+                <input class="form-check-input" name="paymentMethod" type="radio" id="Payment-Gateway" formControlName="paymentMethod" value="Payment-Gateway">
+                <label class="form-check-label" for="Payment-Gateway">
+                  Payment-Gateway
+                </label>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="form-check">
+                <input class="form-check-input" name="paymentMethod" type="radio" id="Cash-On-Delivery" formControlName="paymentMethod" value="Cash-On-Delivery">
+                <label class="form-check-label" for="Cash-On-Delivery">
+                  Cash-On-Delivery
+                </label>
+              </div>
+            </li>
+          </ul>
+          <br />
+
+        </div>
+        <div class="col-lg-1"></div>
+      </div>
+    </div>
+    <br />
+    <div class="d-grid col-6 mx-auto">
+      <button class="btn btn-success" type="submit">Place Order</button>
+    </div>
+  </form>
+  </div>
+
+  <div class="col-lg-2"></div>
+</div>

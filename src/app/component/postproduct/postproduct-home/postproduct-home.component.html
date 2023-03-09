@@ -1,0 +1,184 @@
+
+<div class="bgcolor">
+  <br />
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="">
+    <h3 class="product-title">Post Product Form</h3>
+    <br />
+    <form class="p-3" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+<div class="row">
+      <!-- Text input -->
+      <div class="form-outline   mb-2 col-lg-4">
+        <input type="text" id="form6Example2" class="form-control" formControlName="productname" />
+        <label class="form-label" for="form6Example3">Product name</label><br/>
+        <span *ngIf="productForm.get('productname').invalid && productForm.get('productname').touched" class="text-denger">*Please Enter valid Product Name</span>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-outline   mb-2 col-lg-4">
+        <input type="text" id="form6Example2" class="form-control" formControlName="productType" />
+        <label class="form-label" for="form6Example3"> Product Type</label><br/>
+        <span *ngIf="productForm.get('productType').invalid && productForm.get('productType').touched" class="text-denger">*Please Enter valid Product Type</span>
+
+      </div>
+      <div class="form-outline   mb-2 col-lg-4">
+        <input type="number" id="form6Example4" class="form-control" formControlName="productPrice" />
+        <label class="form-label" for="form6Example4"> Product Price</label><br/>
+        <span *ngIf="productForm.get('productPrice').invalid && productForm.get('productPrice').touched" class="text-denger">*Please Enter valid Product Price</span>
+
+      </div>
+
+    </div>
+      <!-- Text input -->
+
+      <!-- Text input -->
+      <div class="row">
+      <div class="form-outline   col-lg-4 mb-3 ">
+
+        <select class="form-select" aria-label="Default select example" formControlName="categoryName" >
+
+          <option value="{{c.categoryName}}" *ngFor="let c of categories" > {{c.categoryName}} </option>
+        </select>
+        <label for=""> Category</label><br/>
+        <span *ngIf="productForm.get('categoryName').invalid && productForm.get('categoryName').touched" class="text-denger">*Please Select valid Product Category</span>
+      </div>
+
+      <!-- Number input -->
+      <div class="form-outline   col-lg-4 mb-2 ">
+        <input type="text" id="form6Example7" class="form-control" formControlName="productImage1" />
+        <label class="form-label" for="form6Example7"> Image1</label><br/>
+        <span *ngIf="productForm.get('productImage1').invalid && productForm.get('productImage1').touched" class="text-denger">*Please upload atlease two image links</span>
+      </div>
+       <!-- Number input -->
+       <div class="form-outline   col-lg-4 mb-2">
+        <input type="text" id="form6Example8" class="form-control" formControlName="productImage2"/>
+        <label class="form-label" for="form6Example8"> Image2</label><br/>
+        <span *ngIf="productForm.get('productImage2').invalid && productForm.get('productImage2').touched" class="text-denger">*Please upload atlease two image links</span>
+      </div>
+       <!-- Number input -->
+       <div class="form-outline   col-lg-4 mb-2">
+        <input type="text" id="form6Example9" class="form-control" formControlName="productImage3"  />
+        <label class="form-label" for="form6Example9"> Image3</label>
+      </div>
+
+
+       <!-- Number input -->
+       <div class="form-outline col-lg-4   mb-2">
+        <input type="text" id="form6Example10" class="form-control" formControlName="productImage4" />
+        <label class="form-label" for="form6Example10"> Image4</label>
+      </div>
+
+
+      <!-- Message input -->
+      <div class="form-outline col-lg-10   mb-2">
+        <textarea class="form-control" id="form6Example12" rows="4" formControlName="productDescription" ></textarea>
+        <label class="form-label" for="form6Example12"
+          > Description</label>
+          <span *ngIf="productForm.get('productDescription').invalid && productForm.get('productDescription').touched" class="text-denger">*Please Enter Product Description</span>
+
+      </div>
+
+      <label for="">Enter the Specifications :</label> <br/>
+       <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-2">
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example15" class="form-control" formControlName="SpecTitle1"/>
+            <label class="form-label" for="form3Example15">Specification title1</label>
+
+          </div>
+        </div>
+        :
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example25" class="form-control" formControlName="SpecDesc1"/>
+            <label class="form-label" for="form3Example25">Description</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-2">
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example15" class="form-control" formControlName="SpecTitle2" />
+            <label class="form-label" for="form3Example15">Specification title2</label>
+          </div>
+        </div>
+        :
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example25" class="form-control" formControlName="SpecDesc2" />
+            <label class="form-label" for="form3Example25">Description</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-2">
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example15" class="form-control" formControlName="SpecTitle3"/>
+            <label class="form-label" for="form3Example15">Specification title3</label>
+          </div>
+        </div>
+        :
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example25" class="form-control"  formControlName="SpecDesc3" />
+            <label class="form-label" for="form3Example25">Description</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-2">
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example195" class="form-control" formControlName="SpecTitle4"/>
+            <label class="form-label" for="form3Example195">Specification title4</label>
+          </div>
+        </div>
+        :
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example285" class="form-control" formControlName="SpecDesc4" />
+            <label class="form-label" for="form3Example285">Description</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-2">
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example165" class="form-control" formControlName="SpecTitle5"/>
+            <label class="form-label" for="form3Example165">Specification title5</label>
+          </div>
+        </div>
+        :
+        <div class="col">
+          <div class="form-outline col-lg-12  ">
+            <input type="text" id="form3Example235" class="form-control" formControlName="SpecDesc5" />
+            <label class="form-label" for="form3Example235">Description</label>
+          </div>
+        </div>
+      </div>
+    </div>
+      <br />
+<div class="d-flex justify-content-center">
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4 col-lg-4" [disabled]="!productForm.valid">
+        Post Product
+      </button>
+    </div>
+    </form>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+</div>
+
+
+<!-- [disabled]="!productForm.valid" -->

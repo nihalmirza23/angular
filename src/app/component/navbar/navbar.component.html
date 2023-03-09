@@ -1,0 +1,100 @@
+
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: hwb(225 96% 3%);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript.void(0)" routerLink="">
+    <img src="../../../assets/images/images123.png" alt="image not availabe" style="height:40px ; width: 150px;"/>
+   </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px" href="Javascript.void(0)" routerLink="/product/6336807fc1b75429d31df70a">
+            Men
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px" href="Javascript.void(0)" routerLink="/product/63368130c1b75429d31df70b">
+            Women
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px"href="Javascript.void(0)" routerLink="/product/63368178c1b75429d31df70c">
+            kids
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px"href="Javascript.void(0)"routerLink="/product/63368297c1b75429d31df70d">
+            Beauty
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px"href="Javascript.void(0)"routerLink="/product/636e27ffc9ea705cbf4d843f">
+            Home
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px"href="Javascript.void(0)"routerLink="/product/636e2b9bc9ea705cbf4d8440">
+            Tech
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif ;font-size:23px"href="Javascript.void(0)"routerLink="/product/636e2cbbc9ea705cbf4d8441">
+            Jewellery
+          </a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <!-- <li class="nav-item">
+         <form>
+            <div class="mb-3">
+             <label for="exampleInputEmail1" class="form-label"></label>
+             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+         </form>
+        </li> -->
+        <!-- <form class="d-flex" >
+          <input class="form-control me-3 col-lg-10" type="search" placeholder="Search your items here" aria-label="Search">
+          <button type="button" class="btn btn-outline-secondary btn-sm" style="height: 30px;">Search</button>
+        </form> -->
+      </ul>
+      <form>
+        <!-- <div class="mb-3">
+         <label for="exampleInputEmail1" class="form-label"></label>
+         <input type="text" class="form-control"  placeholder="Search Products" >
+        </div> -->
+     </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <div class="dropdown" >
+        <a class="btn btn-outline-secondary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><p class="dropdown-item" href="javascript.void(0)" *ngIf="loggedIn"  style="font-family:'Times New Roman', Times, serif ;font-size:23px"
+            >Hi {{username}} !</p></li>
+          <li><a class="dropdown-item" href="javascript.void(0)" routerLink="login" *ngIf="!loggedIn">Log in/Sign up</a></li>
+          <li><a class="dropdown-item" href="javascript.void(0)" routerLink="/profile">Profile</a></li>
+          <li><a class="dropdown-item" href="javascript.void(0)" routerLink="/wallet">Wallet</a></li>
+          <li><a class="dropdown-item" href="javascript.void(0)" routerLink="/myorders">My-Orders</a></li>
+          <li><a class="dropdown-item" href="javascript.void(0)" routerLink="postproduct" *ngIf="loggedIn && isMerchant">
+            Post Product </a></li>
+          <li><a class="dropdown-item" href="javascript.void(0)" routerLink="/" (click)="onLogOut()" *ngIf="loggedIn">Log-out</a></li>
+        </ul>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<button type="button" class="btn btn-outline-secondary" href="javascript.void(0)"  routerLink="/cart">&nbsp;Cart&nbsp;</button>
+
+
+
+
+      <br/><br/>
+
+
+
+
+
+
+
+

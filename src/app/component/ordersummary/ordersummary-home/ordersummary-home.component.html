@@ -1,0 +1,51 @@
+<p>ordersummary-home works!</p>
+
+<br />
+
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <div *ngIf=order>
+      <div *ngFor="let i of order.items">
+        <div class="card  bg-light">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <img class="img-thumbnail" alt="product image" src="{{i.productImage[0]}}" height="40%" width="40%" >
+              <br>
+              <h4>{{ i.productName }} <br /></h4>
+
+
+              <span>Deliver to:-</span> {{ order.address.houseNumber }},&nbsp;
+              {{ order.address.colonyName }},&nbsp;{{
+                order.address.streetName
+              }},&nbsp;{{ order.address.city }},&nbsp;
+              {{ order.address.state }},&nbsp;{{ order.address.pinCode }}
+              <br />
+                order id:{{order.orderId}}
+              <br />
+
+              Product Price:
+              {{ i.productPrice| currency: "Rs. " }} <br />
+
+              Quantity :- {{ i.quantity }} <br />
+              Order status :- {{ order.orderStatus }} <br />
+              Order Date :- {{ order.orderDate }} <br />
+              mode of payment :- {{ order.modeOfPayment }}
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+
+
+
+
+
+

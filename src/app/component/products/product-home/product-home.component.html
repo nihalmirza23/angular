@@ -1,0 +1,32 @@
+
+
+<div class="row" style="margin-top: 0.2%; margin-right: 2%; margin-left: 1%">
+  <div class="col-sm-4" *ngFor="let p of products  |
+   paginate: { itemsPerPage: 6, currentPage: page,
+                totalItems:totalLength  }   ">
+
+    <a href="javascript.void(0)" routerLink="/productdetails/{{p.productid}}">
+      <div class="card" style="width: 25rem; height: 210px;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-5">
+              <div *ngFor="let pi of p.image | slice: 0:1" >
+                <img src="{{pi}}" alt="" style="max-height: 170px; max-width: 140px;"  />
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div style="margin-left: 3%;">
+                <h5 class="card-title">{{ p.productName }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ p.productType }}</h6>
+                <p class="card-text" style="font-size: 15px;">{{ p.category.categoryName }}</p>
+                <span>{{ p.price | currency: "Rs. " }}</span>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </a>
+      </div>
+      <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>
